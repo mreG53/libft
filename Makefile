@@ -1,47 +1,42 @@
 NAME		= libft.a
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
-AR			= ar
-ARFLAGS		= rcs
-RM			= rm -rf
+SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c \
+			ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c \
+			ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c \
+			ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c \
+			ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c \
+			ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c \
+			ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
+			ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
+			ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+BONUS		= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+			ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+			ft_lstclear.c ft_lstiter.c ft_lstmap.c
+OBJ			= $(SRCS:.c=.o)
+BONUS_OBJ	= $(BONUS:.c=.o)
 
-BUILD_DIR	= build
-SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isprint.c ft_isascii.c \
-			ft_toupper.c ft_tolower.c ft_atoi.c ft_strlen.c ft_strlcpy.c \
-			ft_strlcat.c ft_split.c ft_strchr.c ft_strrchr.c ft_strnstr.c \
-			ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c \
-			ft_striteri.c ft_strncmp.c ft_memset.c ft_memcpy.c ft_memchr.c \
-			ft_memmove.c ft_bzero.c ft_calloc.c ft_itoa.c ft_memcmp.c \
-			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
-BONUS_SRCS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-			ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
-OBJS		= $(addprefix $(BUILD_DIR)/,$(SRCS:.c=.o))
-BONUS_OBJS	= $(addprefix $(BUILD_DIR)/,$(BONUS_SRCS:.c=.o))
-BONUS_FLAG	= .bonus_flag
+GREEN		= \033[0;32m
+RESET		= \033[0m
 
 all: $(NAME)
+	@echo "$(GREEN)Proje derlendi$(RESET)\n"
 
-bonus: $(BONUS_FLAG)
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
-$(BONUS_FLAG): $(BONUS_OBJS)
-	$(AR) $(ARFLAGS) $(NAME) $^
-	touch $@
-
-$(NAME): $(OBJS)
-	$(AR) $(ARFLAGS) $@ $^
-
-$(BUILD_DIR):
-	mkdir -p $@
-
-$(BUILD_DIR)/%.o: %.c | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+bonus: $(OBJ) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+	@echo "$(GREEN)Bonus dosyaları eklendi.$(RESET)"
 
 clean:
-	$(RM) $(BUILD_DIR) $(BONUS_FLAG)
+	rm -rf $(OBJ) $(BONUS_OBJ)
+	@echo "$(GREEN)Geçici dosyalar temizlendi.$(RESET)"
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -f $(NAME)
+	@echo "$(GREEN)Tüm derlenmiş dosyalar temizlendi.$(RESET)"
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re bonus
