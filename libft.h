@@ -6,7 +6,7 @@
 /*   By: emgumus <<emgumus@student.42kocaeli.com.tr +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 00:39:48 by emgumus           #+#    #+#             */
-/*   Updated: 2024/11/10 23:39:22 by emgumus          ###   ########.fr       */
+/*   Updated: 2024/11/10 23:39:49 by emgumus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-//s
+
 int		ft_atoi(const char *str);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);

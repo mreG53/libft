@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emgumus <emgumus@student.42kocaeli.com.tr> +#+  +:+       +#+        */
+/*   By: emgumus <<emgumus@student.42kocaeli.com.tr +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:38:39 by emgumus           #+#    #+#             */
-/*   Updated: 2024/11/10 20:30:45 by emgumus          ###   ########.fr       */
+/*   Updated: 2024/11/10 23:39:58 by emgumus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
