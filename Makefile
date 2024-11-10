@@ -16,26 +16,19 @@ BONUS		= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 OBJ			= $(SRCS:.c=.o)
 BONUS_OBJ	= $(BONUS:.c=.o)
 
-GREEN		= \033[0;32m
-RESET		= \033[0m
-
 all: $(NAME)
-	@echo "$(GREEN)Proje derlendi$(RESET)\n"
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 bonus: $(OBJ) $(BONUS_OBJ)
 	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
-	@echo "$(GREEN)Bonus dosyaları eklendi.$(RESET)"
 
 clean:
 	rm -rf $(OBJ) $(BONUS_OBJ)
-	@echo "$(GREEN)Geçici dosyalar temizlendi.$(RESET)"
 
 fclean: clean
 	rm -f $(NAME)
-	@echo "$(GREEN)Tüm derlenmiş dosyalar temizlendi.$(RESET)"
 
 re: fclean all
 

@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emgumus <<emgumus@student.42kocaeli.com.tr +#+  +:+       +#+        */
+/*   By: emgumus <emgumus@student.42kocaeli.com.tr> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:38:39 by emgumus           #+#    #+#             */
-/*   Updated: 2024/10/30 23:55:53 by emgumus          ###   ########.fr       */
+/*   Updated: 2024/11/10 20:30:45 by emgumus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stddef.h>
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {

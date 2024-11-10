@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emgumus <<emgumus@student.42kocaeli.com.tr +#+  +:+       +#+        */
+/*   By: emgumus <emgumus@student.42kocaeli.com.tr> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 01:39:46 by emgumus           #+#    #+#             */
-/*   Updated: 2024/10/27 01:39:46 by emgumus          ###   ########.fr       */
+/*   Updated: 2024/11/10 20:30:43 by emgumus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
