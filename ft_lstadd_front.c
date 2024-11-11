@@ -6,7 +6,7 @@
 /*   By: emgumus <<emgumus@student.42kocaeli.com.tr +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:41:22 by emgumus           #+#    #+#             */
-/*   Updated: 2024/11/01 17:41:22 by emgumus          ###   ########.fr       */
+/*   Updated: 2024/11/11 22:21:15 by emgumus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!lst || !new)
+		return ;
 	if (new)
 	{
 		new->next = *lst;
