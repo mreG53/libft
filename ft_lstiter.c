@@ -6,7 +6,7 @@
 /*   By: emgumus <<emgumus@student.42kocaeli.com.tr +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 23:17:55 by emgumus           #+#    #+#             */
-/*   Updated: 2024/11/05 23:17:55 by emgumus          ###   ########.fr       */
+/*   Updated: 2024/11/11 22:32:06 by emgumus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	t_list	*t_lst;
 
 	t_lst = lst;
-	if (!f)
+	if (!f || !lst)
 		return ;
 	while (t_lst)
 	{
